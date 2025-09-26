@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://use.typekit.net/vjm3isi.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <meta charset="UTF-8" />
 <title></title>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -27,18 +29,21 @@ Dazzle Unicase Bold*/
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: "dazzle-unicase", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.25vh;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 1.5vh;
 }
 .close{
     position: absolute;
     right: 0;
     top: 0;
     left: auto;
-    width: 2vh;
-    top: 0.5vh;
+    width: 1.5vh;
+    top: 0.2vh;
     right: 0.5vh;
     cursor: pointer;
 }
@@ -54,6 +59,7 @@ Dazzle Unicase Bold*/
         text-align: center;
     }
     .popup_about, .popup_essay{
+        display: none;
     font-family: "elza-text", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -66,13 +72,20 @@ Dazzle Unicase Bold*/
     .sm_popup{
     z-index: 1000000;
     position: absolute;
-    background: wheat;
-    width: 20vh;
+    background: black;
+    width: 100%;
     left: auto;
     top: 0;
     overflow-y: scroll;
-    box-shadow: 0vh 0vh 2vh black;
-    right: 0;}
+    /* box-shadow: 0vh 0vh 2vh black; */
+    right: 0;
+    float: left;
+    display: flex
+;
+    justify-content: space-around;}
+    .sm_popup *{
+    color: white !important;}
+    .sm_popup div{float: left;}
 .popup_button{
     /* float: left; */
     border: 1px solid #00000038;
@@ -132,16 +145,14 @@ Dazzle Unicase Bold*/
 
 <div class="sm_popup">
     <img src="x.png" class="close">
-    <div class="popup_title">File</div>  
-    <div class="popup_artist">Ryan Kuo</div>
-    <div class="popup_year">2016</div>
-    <div class="popup_format">Software</div>
+    <div class="sm_popup_title">File</div>  
+    <div class="sm_popup_artist">Ryan Kuo</div>
+    <div class="sm_popup_year">2016</div>
+    <div class="sm_popup_format">Software</div>
     <br>
-    <div class="popup_button_wrap">
-        <div class="popup_button popup_button_1">About</div>
-        <a href="essay.html" class="popup_button popup_button_2">Essay</a>
-        <a href="index.html" class="popup_button popup_button_3">Back to Open Systems 3 </a>
-    </div>
+        <div class="sm_popup_button sm_popup_button_1">About</div>
+        <a href="essay.html" class="sm_popup_button sm_popup_button_2">Essay</a>
+        <a href="index.html" class="sm_popup_button sm_popup_button_3">☼</a>
     <div class="popup_detail"></div>
 </div>
 <div class="popup popup_about">
@@ -166,7 +177,7 @@ The File is a stack of technical documentation about itself. It begins as a disc
         $('.close').click(function(){
             $(this).parent().hide()
         })
-        $('.popup_button_1').click(function(){
+        $('.sm_popup_button_1').click(function(){
             $('.popup_about').show()
         })
     })

@@ -36,8 +36,8 @@ Dazzle Unicase Bold*/
     right: 0;
     top: 0;
     left: auto;
-    width: 2vh;
-    top: 0.5vh;
+    width: 1.5vh;
+    top: 0.2vh;
     right: 0.5vh;
     cursor: pointer;
 }
@@ -66,12 +66,17 @@ Dazzle Unicase Bold*/
     z-index: 1000000;
     position: absolute;
     background: wheat;
-    width: 20vh;
+    width: 100%;
     left: auto;
     top: 0;
     overflow-y: scroll;
     box-shadow: 0vh 0vh 2vh black;
-    right: 0;}
+    right: 0;
+    float: left;
+    display: flex
+;
+    justify-content: space-around;}
+    .sm_popup div{float: left;}
 .popup_button{
     /* float: left; */
     border: 1px solid #00000038;
@@ -131,19 +136,26 @@ Dazzle Unicase Bold*/
 
 <div class="sm_popup">
     <img src="x.png" class="close">
+    <div class="sm_popup_title">File</div>  
+    <div class="sm_popup_artist">Ryan Kuo</div>
+    <div class="sm_popup_year">2016</div>
+    <div class="sm_popup_format">Software</div>
+    <br>
+        <div class="sm_popup_button sm_popup_button_1">About</div>
+        <a href="essay.html" class="sm_popup_button sm_popup_button_2">Essay</a>
+        <a href="index.html" class="sm_popup_button sm_popup_button_3">Back to Open Systems 3 </a>
+    <div class="popup_detail"></div>
+</div>
+<br>
+<br>
+<br>
     <div class="popup_title">File</div>  
     <div class="popup_artist">Ryan Kuo</div>
     <div class="popup_year">2016</div>
     <div class="popup_format">Software</div>
     <br>
-    <div class="popup_button_wrap">
-        <a href="detail.html" class="popup_button popup_button_1">About</a>
-        <a href="essay.html" class="popup_button popup_button_2">Essay</a>
-        <a href="index.html" class="popup_button popup_button_3">Back to Open Systems 3 </a>
-    </div>
-    <div class="popup_detail"></div>
-</div>
-    seperate essay page?
+        <div class="popup_innerspi">About</div>
+    <div class="popup_des"><br>Curatorial text hereLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</div>
 <script>
     $(document).ready(function(){
 

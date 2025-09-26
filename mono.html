@@ -39,12 +39,12 @@ Dazzle Unicase Bold*/
   font-variation-settings:
     "wdth" 100;
 }
-/**{
+*{
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-}*/
+}
 .wrap{
     position: absolute;
     left: 0;
@@ -70,7 +70,6 @@ Dazzle Unicase Bold*/
     overflow: hidden;
 }
 .sidebottom{    position: absolute;
-    perspective: 100vh;
     left: 50%;
     top: 0;
     background-image: url(plus.png);
@@ -80,36 +79,18 @@ Dazzle Unicase Bold*/
     height: 21.6%;
     width: 12.5%;
     transform-origin: left top;
-    overflow: visible;
+    overflow: hidden;
 }
-.sidetop {
+.sidetop{    
     position: absolute;
     left: 50%;
     top: 0;
     width: 12.5%;
     transform-origin: left top;
-    height: 6vh;
+    height: 50px;
     background-color: white;
-    margin-top: -8vh;
+    margin-top: -60px;
     overflow: hidden;
-}
-.sidebottom.side_1 .background_image_wrap{
-    display: none;
-}
-.sidebottom.side_2 .background_image_wrap{
-    display: none;
-}
-.sidebottom.side_3 .background_image_wrap{
-    display: none;
-}
-.sidebottom.side_9 .background_image_wrap{
-    display: none;
-}
-.sidebottom.side_10 .background_image_wrap{
-    display: none;
-}
-.sidebottom.side_11 .background_image_wrap{
-    display: none;
 }
 .side_1{
     left: 0.2%;
@@ -255,33 +236,13 @@ Dazzle Unicase Bold*/
     position: absolute;
     left: 0;
     top: 0;
+    background-image: url(work1.png);
     background-size: cover;
     background-position: center;
 }
-.background_image_1{
-    background-image: url(work1.png);
-}
-.background_image_2{
-    background-image: url(work4.png);
-}
-.background_image_3{
-    background-image: url(work3.png);
-}
-.background_image_4{
-    background-image: url(work1.png);
-}
-.background_image_5{
-    background-image: url(work4.png);
-}
-.background_image_6{
-    background-image: url(work3.png);
-}
-.background_image_7{
-    background-image: url(work1.png);
-}
 
 .bar{
-    background: transparent;
+    background: black;
     width : 5%;
     height: 100%;
     display : inline-block;
@@ -293,7 +254,7 @@ Dazzle Unicase Bold*/
     transition: opacity 0.5s;
     /*opacity: 0*/
 }
-.sidebottom .bar_wrap{
+.side .bar_wrap{
     /*padding-right: 850%;*/
     position: absolute;
     left: 0;
@@ -334,16 +295,13 @@ Dazzle Unicase Bold*/
     top:0;
     z-index: 1;
     text-transform: uppercase;
-    font-family: "dazzle-unicase", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 .info_bar{ 
     position: absolute;
     z-index: 10000;
     left: 49.5%;
     transform: translateX(-50%);
-    /*background-color: white;*/
+    background-color: white;
     height: 54%;
     padding-top: 15vw;
     text-align: center;
@@ -360,7 +318,7 @@ Dazzle Unicase Bold*/
     background-color: white;
     mix-blend-mode: difference;
 }
-.ovalDiv_img:hover .oval_following{
+#ovalDiv:hover .oval_following{
     opacity: 1;
 }
 .oval_following *{
@@ -447,113 +405,26 @@ filter: invert(1);
     letter-spacing: -0.025vh;
     }
 
-    .ovalDiv {
-        pointer-events: none;
-    mix-blend-mode: darken;
-      boz-shadow:0vh 0vh 7.5vh white;
-        transition: 1s box-shadow;
-        box-shadow: 0vh 0vh 15vh 15vh white, 0vh 0vh 0vh 100vw #3d3d3d00;
-    }
-    .ovalDiv_img,.ovalDiv {
+    #ovalDiv {
       width: 50px;
       height: 50px;
+      background: crimson;
       border-radius: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
       z-index: 100000;
-  }
-    .ovalDiv_img{
-      background-size: auto 100%;
-      background-position: center;
-      background-repeat: no-repeat;
     }
-     .ovalDiv.shadow{
-    transition: 0s box-shadow;
-    box-shadow: 0vh 0vh 15vh 15vh white, 0vh 0vh 0vh 100vw #3d3d3d;
-    transition: opacity 1s;
-}
-.turnOn .ovalDiv.shadow{
-    opacity: 0;
-}
-    .ovalDiv_sun_img{
-      background-image: url(sun.png);
-    }
-    .ovalDiv_moon_img{
-      background-image: url(moon.png);
-    }
-    .perspective_wrap{
-    width: 100%;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform-origin: left top;
-    overflow: hidden;}
-    .sidebottom.side_9 .perspective_wrap{
-    transform-origin: left top;
-    /*background: #339981;*/
-    transform: rotateX(-30deg) skewX(-24.5deg) scaleY(0.76);
-}
-    .sidebottom.side_8 .perspective_wrap{
-    background: red;
-    transform: rotateX(-36deg) skewX(-12deg) scaleY(0.92);
-    }
-    .sidebottom.side_7 .perspective_wrap{
-    background: rebeccapurple;
-    transform: rotateX(-29deg) skewX(-5deg) scaleY(0.88);
-}
-    .sidebottom.side_6 .perspective_wrap{
-    transform-origin: center top;
-    background: #339981;
-    transform: rotateX(-20deg) scaleY(0.81);
-}
-.sidebottom.side_5 .perspective_wrap{
-    background: rebeccapurple;
-    transform: rotateX(-29deg) skewX(5deg) scaleY(0.88);
-    transform-origin: right top;
-}
-    .sidebottom.side_4 .perspective_wrap{
-    background: red;
-    transform: rotateX(-36deg) skewX(12deg) scaleY(0.92);
-    transform-origin: right top;
-    }
-
-#ovalRoute{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    border: 1px solid white;
-    z-index: 1;
-    border-radius: 50% 50%;
-}
-.bar_wrap{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;}
 </style>
 </head>
 <body>
-<div class="ovalDiv_moon_img ovalDiv_img">
+  <div id="ovalDiv">
   <div class="oval_following">
-    – Current Server: <span class="sp-name"></span><br>
-    – Site (City/Country): <span class="sp-loc"></span><br>
-    – Battery Level: <span class="sp-bat"></span><br>
-    – Time There: <span class="sp-time"></span><br>
-    </div>
+        <div>Server local time: <strong id="sp-time">--:--:--</strong></div>
+<div class="data"><span class="label">Server:</span> <span id="serverName" class="value">Rhizome</span></div>
+<div class="data"><span class="label"></span> <span id="tz" class="value">West Coast, USA.</span></div>
+<div class="data"><span class="label">PV Voltage:</span> <span id="voltage" class="value">  14.23 volts</span></div>
 </div>
-  <div class="ovalDiv ovalDiv_moon">
 </div>
-    <div class="ovalDiv_img ovalDiv_sun_img">
-  <div class="oval_following">
-    – Current Server: <span class="sp-name"></span><br>
-    – Site (City/Country): <span class="sp-loc"></span><br>
-    – Battery Level: <span class="sp-bat"></span><br>
-    – Time There: <span class="sp-time"></span><br>
-    </div></div>
-  <div class="ovalDiv ovalDiv_sun">
-</div>
-  <div id="ovalRoute"></div>
     <div class="title">Open Systems 3</div>
     <div class="info_bar">
         About OS3<br>
@@ -586,30 +457,30 @@ The File is a stack of technical documentation about itself. It begins as a disc
 
 <div class="wrap">
     <img src="background.png">
-    <div class="barhide side side_1"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_3"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_2"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_4"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_5"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_6"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_7"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_8"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_9"> <div class="bar_wrap"></div></div>
-    <div class="barhide side side_10"><div class="bar_wrap"></div></div>
-    <div class="barhide side side_11"><div class="bar_wrap"></div></div>
+    <div class="barhide side side_1"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_3"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_2"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_4"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_5"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_6"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_7"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_8"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_9"> <div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_10"><div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
+    <div class="barhide side side_11"><div class="bar_wrap"></div><div class="background_image_wrap"><div class="bar bar_init"></div><div class="background_image"></div></div></div>
 
-    <div class="barhide sidebottom side_1" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_3" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_2" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_4" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_5" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_6" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_7" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_8" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_9" ><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_10"><div class="perspective_wrap"></div></div>
-    <div class="barhide sidebottom side_11"><div class="perspective_wrap"></div></div>
-<!-- <div class="background_image_wrap"> -->
+    <div class="barhide sidebottom side_1"></div>
+    <div class="barhide sidebottom side_3"></div>
+    <div class="barhide sidebottom side_2"></div>
+    <div class="barhide sidebottom side_4"></div>
+    <div class="barhide sidebottom side_5"></div>
+    <div class="barhide sidebottom side_6"></div>
+    <div class="barhide sidebottom side_7"></div>
+    <div class="barhide sidebottom side_8"></div>
+    <div class="barhide sidebottom side_9"></div>
+    <div class="barhide sidebottom side_10"></div>
+    <div class="barhide sidebottom side_11"></div>
+
     <div class="barhide sidetop side_1"></div>
     <div class="barhide sidetop side_2"></div>
     <div class="barhide sidetop side_3"></div>
@@ -621,199 +492,108 @@ The File is a stack of technical documentation about itself. It begins as a disc
     <div class="barhide sidetop side_9"></div>
     <div class="barhide sidetop side_10"></div>
     <div class="barhide sidetop side_11"></div>
-<!-- </div> -->
+</div>
 <script>
-    var tick_init = true
 function easeInOutSine(x){
     return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
 }
 
-(function () {
-  // update all matching elements by class
-  function setTextAll(cls, text) {
-    const els = document.getElementsByClassName(cls);
-    for (let i = 0; i < els.length; i++) els[i].textContent = text;
-  }
+(async function startSPClock() {
+  const el = document.getElementById('sp-time');
+  let tz = null;
 
-  const V2 = 'https://solarprotocol.net/api/v2/opendata.php';
-  const V1 = 'https://solarprotocol.net/api/v1/opendata.php';
-
-  // robust systemInfo fetcher: tries v2 JSON then v1 text; accepts {key:..} or {value:..}
-  async function sys(key) {
-    const urls = [`${V2}?systemInfo=${encodeURIComponent(key)}`, `${V1}?systemInfo=${encodeURIComponent(key)}`];
-    for (const u of urls) {
-      try {
-        const r = await fetch(u, { cache: 'no-store' });
-        if (!r.ok) continue;
-        if (u.includes('/v2/')) {
-          const j = await r.json();
-          const val = (j && (j[key] ?? j.value)) ?? '';
-          if (String(val).trim() !== '') return String(val).trim();
-        } else {
-          const t = (await r.text()).replace(/["\n\r]/g, '').trim();
-          if (t) return t;
-        }
-      } catch (_) {}
-    }
-    return '';
-  }
-
-  // robust value fetcher (e.g., battery-percentage)
-  async function val(key) {
-    const urls = [`${V2}?value=${encodeURIComponent(key)}`, `${V1}?value=${encodeURIComponent(key)}`];
-    for (const u of urls) {
-      try {
-        const r = await fetch(u, { cache: 'no-store' });
-        if (!r.ok) continue;
+  async function getTZ() {
+    // Try v2 (JSON)
+    try {
+      const r = await fetch('https://solarprotocol.net/api/v2/opendata.php?systemInfo=tz');
+      if (r.ok) {
         const j = await r.json();
-        const v = j[key] ?? j.value ?? null;
-        if (v != null) return v;
-      } catch (_) {}
-    }
-    return null;
-  }
-
-  let tz = ''; // timezone string for Intl
-
-  async function boot() {
-    // 1) metadata
-    const [name, location, city, country, bat] = await Promise.all([
-      sys('name'), sys('location'), sys('city'), sys('country'), val('battery-percentage')
-    ]);
-
-    const locText = (location && location.trim()) || (city && country ? `${city}, ${country}` : '');
-
-    setTextAll('sp-name', name || '—');
-    setTextAll('sp-loc',  locText || '—');
-    if (bat != null) setTextAll('sp-bat', `${bat}%`);
-
-    // 2) timezone → start clock + animations
-    tz = await sys('tz') || 'UTC';
-    tick();
-    setInterval(tick, 1000);
-
-    // 3) refresh server + tz every 5 min (active server can change)
-    setInterval(async () => {
-      try {
-        const [n2, l2, c2, co2] = await Promise.all([sys('name'), sys('location'), sys('city'), sys('country')]);
-        const loc2 = (l2 && l2.trim()) || (c2 && co2 ? `${c2}, ${co2}` : '');
-        setTextAll('sp-name', n2 || '—');
-        setTextAll('sp-loc',  loc2 || '—');
-        const tz2 = await sys('tz');
-        if (tz2) tz = tz2;
-      } catch (e) {
-        console.warn('[SP] refresh failed', e);
+        if (j && j.tz) return j.tz;
       }
-    }, 5 * 60 * 1000);
-
-    // quick inspect
-    window.SP_DEBUG = { name, location: locText, battery: bat, tz };
-    console.debug('[SP]', window.SP_DEBUG);
+    } catch (_) {}
+    // Fallback to v1 (plain text)
+    const r2 = await fetch('https://solarprotocol.net/api/v1/opendata.php?systemInfo=tz');
+    const t = await r2.text();
+    return t.replace(/["\n\r]/g, '').trim();
   }
 
-  function tick() {
-    if (!tz) return;
+  async function refetchTZ() {
+    try { tz = await getTZ(); }
+    catch (e) { console.error('Solar Protocol tz fetch failed', e); }
+  }
+function tick() {
+  if (!tz) return;
+  const now = new Date();
+  const formatted = new Intl.DateTimeFormat(undefined, {
+    timeZone: tz,
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23' // 24h; remove for 12h
+  }).formatToParts(now);
 
-    const parts = new Intl.DateTimeFormat(undefined, {
-      timeZone: tz, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'
-    }).formatToParts(new Date());
-
-    let h = 0, m = 0, s = 0;
-    for (const p of parts) {
-      if (p.type === 'hour')   h = parseInt(p.value, 10);
-      if (p.type === 'minute') m = parseInt(p.value, 10);
-      if (p.type === 'second') s = parseInt(p.value, 10);
-    }
-
-    setTextAll('sp-time', `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`);
-
-    const secs  = h * 3600 + m * 60 + s;
-    const angle = map(secs, 0, 86400, 0, 360) - 90;
-
-    const sun      = document.getElementsByClassName('ovalDiv_sun')[0];
-    const moon     = document.getElementsByClassName('ovalDiv_moon')[0];
-    const sun_img  = document.getElementsByClassName('ovalDiv_sun_img')[0];
-    const moon_img = document.getElementsByClassName('ovalDiv_moon_img')[0];
-
-    if (typeof tick_init !== 'undefined' && tick_init) {
-      if (angle < 180) $('.ovalDiv_sun').addClass('shadow'); else $('.ovalDiv_moon').addClass('shadow');
-      setTimeout(() => { $('body').addClass('turnOn'); }, 1000);
-      tick_init = false;
-    }
-
-    if (sun)      animate(angle, sun);
-    if (moon)     animate(angle - 180, moon);
-    if (sun_img)  animate(angle, sun_img);
-    if (moon_img) animate(angle - 180, moon_img);
-
-    // your gradient bar logic intact
-    if (secs > 21600 && secs < 64800) {
-      var sel = Math.round(map(angle, 0, 180, 20/2, 11*20 - 20/2));
-      for (var i = sel - 1; i >= 0; i--) {
-        let sml =  ((easeInOutSine((sel - i) / sel)) / 2) * 100/4;
-        let big = (100 - ((easeInOutSine((sel - i) / sel)) / 2) * 100)/4;
-        $('.bar_' + i).css({ 'background': `linear-gradient(0deg, transparent ${sml + 50 - 5}%, black ${sml+50}%, black ${big+50}%, transparent ${big + 50 + 5}%)` });
-      }
-      // for (var j = 20; j >= 0; j--) {
-      //   let sml2 = ((easeInOutSine((j) / 20)) / 2) * 100/4;
-      //   let big2 =( 100 - ((easeInOutSine((j) / 20)) / 2) * 100)/4;
-      //   $('.bar_' + (sel + j)).css({ 'background': `linear-gradient(0deg, transparent ${sml2 + 50 - 5}%, black ${sml2+50}%, black ${big2+50}%, transparent ${big2 + 50 + 5}%)` });
-      // }
-    }
+  let h = 0, m = 0, s = 0;
+  for (const p of formatted) {
+    if (p.type === 'hour')   h = parseInt(p.value, 10);
+    if (p.type === 'minute') m = parseInt(p.value, 10);
+    if (p.type === 'second') s = parseInt(p.value, 10);
   }
 
-  document.addEventListener('DOMContentLoaded', boot);
+  const secs = h * 3600 + m * 60 + s;
+  let angle = map(secs,0,86400,0,360)-90;
+  animate(angle)
+
+  if(secs > 21600 &&secs <64800){
+    var sel = Math.round(map(angle, 0, 180, 20/2, 11*20-20/2))
+    for (var i = sel - 1; i >= 0; i--) {
+        smlval = ((easeInOutSine((sel-i)/sel))/2)*100
+        bigval = 100-((easeInOutSine((sel-i)/sel))/2)*100
+            $('.bar_'+i).css({'background':`linear-gradient(0deg, black ${smlval}%, transparent ${smlval}%, transparent ${bigval}%, black ${bigval}%)`});
+    }
+    for (var i = 20; i >= 0; i--) {
+        smlval = ((easeInOutSine((i)/20))/2)*100
+        bigval = 100-((easeInOutSine((i)/20))/2)*100
+            $('.bar_'+(sel+i)).css({'background':`linear-gradient(0deg, black ${smlval}%, transparent ${smlval}%, transparent ${bigval}%, black ${bigval}%)`});
+    }
+
+  }
+}
+
+
+  await refetchTZ();
+  tick();
+  setInterval(tick, 1000);
+  // POE can change; refresh timezone periodically
+  setInterval(refetchTZ, 5 * 60 * 1000);
 })();
 
 function map(value, start1, stop1, start2, stop2) {
   return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
 }
 
+    const div = document.getElementById("ovalDiv");
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight * 0.25;
-    const radiusX = window.innerHeight * 0.5; // horizontal radius (ellipse width)
-    const radiusY = window.innerHeight * 0.5; // vertical radius (ellipse height)
+    const radiusX = window.innerWidth * 0.35; // horizontal radius (ellipse width)
+    const radiusY = window.innerHeight * 0.15; // vertical radius (ellipse height)
     const degToRad = (deg) => (deg) * Math.PI / 180;
-$('#ovalRoute').css({'width':radiusX*2 +'px'})
-$('#ovalRoute').css({'height':radiusY*2 +'px'})
-$('#ovalRoute').css({'left':centerX +'px'})
-$('#ovalRoute').css({'top':centerY +'px'})
-    function animate(angle,elem) {
+
+    function animate(angle) {
+        
         const x = centerX + radiusX * Math.cos(degToRad(angle));
         const y = centerY + radiusY * Math.sin(degToRad(angle));
-        elem.style.left = x + "px";
-        elem.style.top = y + "px";
+// 9*20 = 180
+
+        div.style.left = x + "px";
+        div.style.top = y + "px";
     }
 
+    animate();
 
 
 
 
     $(document).ready(function(){
-
-
-        $(function(){
-  var h = $(".side").outerHeight();
-  // center horizontally, use half the height for vertical center
-  $(".sidebottom .background_image").css("background-position", "center " + "calc(50% - " + (h) + "px)");
-  
-  // optional: recalc on resize
-  $(window).on("resize", function(){
-    var h =  $(".side").outerHeight();
-    $(".sidebottom .background_image").css("background-position", "center " + "calc(50% - " + (h) + "px)");
-  });
-});
-
-
-
-
-for (var i = 5; i >= 1; i--) {
-    $('.side').append('<div class="background_image_wrap"><div class="background_image background_image_'+i+'"></div></div>')
-}
-for (var i = 5; i >= 1; i--) {
-    $('.sidebottom').find('.perspective_wrap').append('<div class="background_image_wrap"><div class="background_image background_image_'+i+'"></div></div>')
-}
-        
         var scroll_counter = 0
 $('.sidetop').append('\
     <div class="artistname_wrap">\
@@ -870,6 +650,7 @@ $('.artistname_14').click(function() { window.location.href = 'detail.html'; });
 
         $('.artistname_3').click(function(){
             $('.popup_3').show()
+            console.log('!!!')
         })
         $('.close').click(function(){
             $(this).parent().hide()
@@ -880,7 +661,6 @@ $('.artistname_14').click(function() { window.location.href = 'detail.html'; });
                 scroll_counter = -8
             }
             scroll()
-            // scroll_sun()
         })
         $('.arrow_l').click(function(){
             scroll_counter++
@@ -888,13 +668,11 @@ $('.artistname_14').click(function() { window.location.href = 'detail.html'; });
                 scroll_counter = 5
             }
             scroll()
-            // scroll_sun()
         })
         function scroll(){
-            $('.artistname_wrap').css({'transform':'translateX('+(7.1428*scroll_counter)+'%)'})
-            $('.background_image_wrap').css({'transform':'translateX('+(7.1428*scroll_counter)+'%) translateY('+(100*scroll_counter)+'%)'})
-            // $('.sidebottom .background_image_wrap').css({'transform':'translateX('+(7.1428*(scroll_counter-1))+'%) translateY('+(100*(scroll_counter+1))+'%)'})
-        }
+        $('.artistname_wrap').css({'transform':'translateX('+(7.1428*scroll_counter)+'%)'})
+        $('.background_image_wrap').css({'transform':'translateX('+(7.1428*scroll_counter)+'%)'})
+    }
     })
 
 
@@ -923,6 +701,7 @@ async function fetchSunlightFromLocation() {
       const watts = data.daily.shortwave_radiation_sum[0]; // MJ/m²
       sunlightStrength = watts;
 
+      console.log("☀️ Solar radiation:", watts, "MJ/m²");
     });
   } catch (err) {
     console.error("Failed to get location or solar data", err);
