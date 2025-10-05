@@ -1,0 +1,189 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/vjm3isi.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<title></title>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<style>
+body,html{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url(egbg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*Dazzle Unicase Light
+font-family: "dazzle-unicase", sans-serif;
+font-weight: 300;
+font-style: normal;
+Dazzle Unicase Bold*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 1.5vh;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: auto;
+    width: 1.5vh;
+    top: 0.2vh;
+    right: 0.5vh;
+    cursor: pointer;
+}
+.close:hover{
+    filter: invert(1);
+}
+.popup_title{
+    font-size: 5vh;
+    text-align: center;
+    line-height: 1.2;
+    width: 100%;}
+    .popup_artist{
+        text-align: center;
+    }
+    .popup_about, .popup_essay{
+        display: none;
+    font-family: "elza-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vh;
+    letter-spacing: -0.025vh;
+    }
+    .popup_essay{
+    display: none;
+    }
+    .sm_popup{
+    z-index: 1000000;
+    position: absolute;
+    background: black;
+    width: 100%;
+    left: auto;
+    top: 0;
+    overflow-y: scroll;
+    /* box-shadow: 0vh 0vh 2vh black; */
+    right: 0;
+    float: left;
+    display: flex
+;
+    justify-content: space-around;}
+    .sm_popup *{
+    color: white !important;}
+    .sm_popup div{float: left;}
+.popup_button{
+    /* float: left; */
+    border: 1px solid #00000038;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: wheat;
+}
+.popup_button:hover{
+    filter: invert(1);
+}
+.popup_button_wrap{
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.popup_artist,
+.popup_year,
+.popup_format{
+    line-height: 1;
+    text-align: center;
+}
+.popup{
+    z-index: 1000000;
+    position: absolute;
+    background: wheat;
+    width: 100vh;
+    left: calc(50vw - 50vh);
+    top: 2.5vh;
+    padding: 1vh;
+    height: 95vh;
+    overflow-y: scroll;
+    box-shadow: 0vh 0vh 2vh black;
+}
+    .popup_des{
+        font-family: "elza-text", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5vh;
+        letter-spacing: -0.025vh;
+    }
+    .popup_innerspi{
+        max-width: 30vh;
+        border: 1px solid black;
+        text-align: center;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        margin-top: 1vh;
+    }
+    a{text-decoration: none;
+        cursor: pointer;}
+</style>
+</head>
+<body>
+</div>
+
+<div class="sm_popup">
+    <img src="x.png" class="close">
+    <div class="sm_popup_title">File</div>  
+    <div class="sm_popup_artist">Ryan Kuo</div>
+    <div class="sm_popup_year">2016</div>
+    <div class="sm_popup_format">Software</div>
+    <br>
+        <div class="sm_popup_button sm_popup_button_1">About</div>
+        <a href="essay.html" class="sm_popup_button sm_popup_button_2">Essay</a>
+        <a href="index.html" class="sm_popup_button sm_popup_button_3">☼</a>
+    <div class="popup_detail"></div>
+</div>
+<div class="popup popup_about">
+    <img src="x.png" class="close">
+    <div class="popup_title">File</div>  
+    <div class="popup_artist">Ryan Kuo</div>
+    <div class="popup_year">2016</div>
+    <div class="popup_format">Software</div>
+    <br>
+        <div class="popup_innerspi">About</div>
+    <div class="popup_des"><br>Curatorial text hereLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</div>
+</div>
+<div class="popup popup_essay">
+    <img src="x.png" class="close">
+    <div class="popup_des"><br><br>"File is a process work inspired by agile methodologies.<br>
+<br>
+The File is a stack of technical documentation about itself. It begins as a discussion on the contingency of digital files and grows into a cipher for the artist-worker."</div>
+</div>
+<script>
+    $(document).ready(function(){
+
+        $('.close').click(function(){
+            $(this).parent().hide()
+        })
+        $('.sm_popup_button_1').click(function(){
+            $('.popup_about').show()
+        })
+    })
+
+
+</script>
+
+</body>
+</html>

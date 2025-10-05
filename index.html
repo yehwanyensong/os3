@@ -60,20 +60,41 @@ Dazzle Unicase Bold*/
     top: 0;
     /*opacity: 0.5*/
 }
-.side{    position: absolute;
+.side,.sideextra{
+    position: absolute;
     left: 50%;
     top: 0;
-    background: #ff00005e;
+    /* background: #ff00005e; */
     height: 21.6%;
     width: 12.5%;
     transform-origin: left top;
     overflow: hidden;
+    background-image: url(basic_img/plus.png);
+    background-size: 10%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
+.sideextra_1{
+    left: -12.25%;
+    top: 10%;
+    background-color: white;
+    background-position: left center;
+    /* z-index: 10000000000000; */
+    transform: skewY(40deg);
+    transform-origin: right}
+.sideextra_2{
+    left: 99%;
+    top: 10%;
+    background-color: white;
+    background-position: left center;
+    /* z-index: 10000000000000; */
+    transform: skewY(-40deg);
+    transform-origin: left;}
 .sidebottom{    position: absolute;
     perspective: 100vh;
     left: 50%;
     top: 0;
-    background-image: url(plus.png);
+    background-image: url(basic_img/plus.png);
     background-size: 10%;
     background-position: 50% 35%;
     background-repeat: no-repeat;
@@ -92,6 +113,10 @@ Dazzle Unicase Bold*/
     background-color: white;
     margin-top: -8vh;
     overflow: hidden;
+}
+.sidetop_hovered{
+    z-index: 1000000;
+    box-shadow: 0vh 0vh 0vh 1vh red;
 }
 .sidebottom.side_1 .background_image_wrap{
     display: none;
@@ -166,17 +191,31 @@ Dazzle Unicase Bold*/
     top: 26%;
     transform: scaleX(0.17) skewY(-35deg);
 }
-.sidebottom.side_1{transform: scaleX(0.17) skewY(35deg) translateY(100%)}
-.sidebottom.side_2{transform: scaleX(0.46) skewY(33deg) translateY(100%)}
-.sidebottom.side_3{transform: scaleX(0.735) skewY(28.6deg) translateY(100%)}
-.sidebottom.side_4{transform: scaleX(0.95) skewY(21.2deg) translateY(100%)}
-.sidebottom.side_5{transform: scaleX(1.08) skewY(11.8deg) translateY(100%)}
-.sidebottom.side_6{transform: scaleX(1.125) skewY(0deg) translateY(100%)}
-.sidebottom.side_7{transform: scaleX(1.08) skewY(-11.8deg) translateY(100%)}
-.sidebottom.side_8{transform: scaleX(0.95) skewY(-21.2deg) translateY(100%)}
-.sidebottom.side_9{transform: scaleX(0.735) skewY(-28.6deg) translateY(100%)}
-.sidebottom.side_10{transform: scaleX(0.46) skewY(-33deg) translateY(100%)}
-.sidebottom.side_11{transform: scaleX(0.17) skewY(-35deg) translateY(100%)}
+.turnOn .sidebottom.side_1{transform: scaleX(0.17) skewY(35deg) translateY(100%)}
+.turnOn .sidebottom.side_2{transform: scaleX(0.46) skewY(33deg) translateY(100%)}
+.turnOn .sidebottom.side_3{transform: scaleX(0.735) skewY(28.6deg) translateY(100%)}
+.turnOn .sidebottom.side_4{transform: scaleX(0.95) skewY(21.2deg) translateY(100%)}
+.turnOn .sidebottom.side_5{transform: scaleX(1.08) skewY(11.8deg) translateY(100%)}
+.turnOn .sidebottom.side_6{transform: scaleX(1.125) skewY(0deg) translateY(100%)}
+.turnOn .sidebottom.side_7{transform: scaleX(1.08) skewY(-11.8deg) translateY(100%)}
+.turnOn .sidebottom.side_8{transform: scaleX(0.95) skewY(-21.2deg) translateY(100%)}
+.turnOn .sidebottom.side_9{transform: scaleX(0.735) skewY(-28.6deg) translateY(100%)}
+.turnOn .sidebottom.side_10{transform: scaleX(0.46) skewY(-33deg) translateY(100%)}
+.turnOn .sidebottom.side_11{transform: scaleX(0.17) skewY(-35deg) translateY(100%)}
+.side_1 .artistname_wrap,
+.side_2 .artistname_wrap,
+.side_3 .artistname_wrap,
+.side_4 .artistname_wrap,
+.side_5 .artistname_wrap{
+    box-shadow: black -100vw 0vh 0vh 100vw;
+}
+.side_7 .artistname_wrap,
+.side_8 .artistname_wrap,
+.side_9 .artistname_wrap,
+.side_10 .artistname_wrap,
+.side_11 .artistname_wrap{
+    box-shadow: black 100vw 0vh 0vh 100vw;
+}
 .side_1 .artistname_wrap {
     margin-left: 0%;
 }
@@ -258,27 +297,47 @@ Dazzle Unicase Bold*/
     background-size: cover;
     background-position: center;
 }
-.background_image_1{
-    background-image: url(work1.png);
-}
-.background_image_2{
-    background-image: url(work4.png);
-}
-.background_image_3{
-    background-image: url(work3.png);
-}
-.background_image_4{
-    background-image: url(work1.png);
-}
-.background_image_5{
-    background-image: url(work4.png);
-}
-.background_image_6{
-    background-image: url(work3.png);
-}
-.background_image_7{
-    background-image: url(work1.png);
-}
+
+
+
+
+
+
+
+
+
+
+.background_image_wrap_1{ left: 0%}
+.background_image_wrap_2{ left: 100%}
+.background_image_wrap_3{ left: 200%}
+.background_image_wrap_4{ left: 300%}
+.background_image_wrap_5{ left: 400%}
+.background_image_wrap_6{ left: 500%}
+.background_image_wrap_7{ left: 600%}
+.background_image_wrap_8{ left: 700%}
+.background_image_wrap_9{ left: 800%}
+.background_image_wrap_10{left: 900%}
+.background_image_wrap_11{left: 1000%}
+.background_image_wrap_12{left: 1100%}
+.background_image_wrap_13{left: 1200%}
+.background_image_wrap_14{left: 1300%}
+
+
+
+.background_image_1{ background-image: url(artwork_img/Rimbawan.png);}
+.background_image_2{ background-image: url(artwork_img/American.png);}
+.background_image_3{ background-image: url(artwork_img/Ryank.png);}
+.background_image_4{ background-image: url(artwork_img/Or.png);}
+.background_image_5{ background-image: url(artwork_img/Ryanc.png);}
+.background_image_6{ background-image: url(artwork_img/Tiri.png);}
+.background_image_7{ background-image: url(artwork_img/Jen.png);}
+.background_image_8{ background-image: url(artwork_img/Alice.png);}
+.background_image_9{ background-image: url(artwork_img/Herdimas.png);}
+.background_image_10{background-image: url(artwork_img/Chia.png);}
+.background_image_11{background-image: url(artwork_img/Ho.png);}
+.background_image_12{ background-image:url(artwork_img/Bani.png);}
+.background_image_13{background-image: url(artwork_img/Samson.png);}
+.background_image_14{background-image: url(artwork_img/Tega.png);}
 
 .bar{
     background: transparent;
@@ -293,8 +352,10 @@ Dazzle Unicase Bold*/
     transition: opacity 0.5s;
     /*opacity: 0*/
 }
+.bar_wrap{
+    pointer-events: none;
+}
 .sidebottom .bar_wrap{
-    /*padding-right: 850%;*/
     position: absolute;
     left: 0;
     top: 0;
@@ -305,6 +366,27 @@ Dazzle Unicase Bold*/
     /*padding-right: 850%;*/
     position: relative;
 }
+.side .background_image_wrap,
+.sidebottom .background_image_wrap{
+    opacity: 0.3;
+}
+.turnOn .side .background_image_wrap,
+.turnOn .sidebottom .background_image_wrap{
+    transition: opacity 1s transform 0.5s;
+    opacity: 1;
+}
+.turnOn .side_1 .background_image_wrap{opacity: 0.2}
+.turnOn .side_2 .background_image_wrap{opacity: 0.4}
+.turnOn .side_3 .background_image_wrap{opacity: 0.6}
+.turnOn .side_4 .background_image_wrap{opacity: 0.8}
+.turnOn .side_8 .background_image_wrap{opacity: 0.8}
+.turnOn .side_9 .background_image_wrap{opacity: 0.6}
+.turnOn .side_10 .background_image_wrap{opacity: 0.4}
+.turnOn .side_11 .background_image_wrap{opacity: 0.2}
+.turnOn .sidebottom.side_4 .background_image_wrap{opacity: 0.3}
+.turnOn .sidebottom.side_5 .background_image_wrap{opacity: 0.6}
+.turnOn .sidebottom.side_7 .background_image_wrap{opacity: 0.6}
+.turnOn .sidebottom.side_8 .background_image_wrap{opacity: 0.3}
 .bar_init{
     height: 100%;
     width: 7.1428%;
@@ -312,7 +394,8 @@ Dazzle Unicase Bold*/
 .artistname_wrap,.background_image_wrap{
     transition: transform 0.5s;
     width: 1400%;
-    height: 100%
+    height: 100%;
+    position: relative;
 }
 .artistname{
     float: left;
@@ -340,25 +423,34 @@ Dazzle Unicase Bold*/
 }
 .info_bar{ 
     position: absolute;
-    z-index: 10000;
+    z-index: 1000000000000000;
     left: 49.5%;
     transform: translateX(-50%);
-    /*background-color: white;*/
-    height: 54%;
-    padding-top: 15vw;
+    background-color: white;
+    /* height: 54%; */
+    /* padding-top: 15vw; */
     text-align: center;
     font-size: 1.5vh;
-    mix-blend-mode: difference;
-    width: 22.7vh;
+    /* mix-blend-mode: difference; */
+    width: 52.7vh;
+    margin-top: 10vw;
 }
 .oval_following{
     left: 100%;
     top: 100%;
-    opacity: 0;
     position: absolute;
-    z-index: 10000;
     background-color: white;
     mix-blend-mode: difference;
+    width: 30vh;
+}
+
+.oval_following, .oval_following *{
+    font-size: 1.5vh;
+    line-height: 1.2;
+}
+
+.turnOn .oval_following{
+    opacity: 0;
 }
 .ovalDiv_img:hover .oval_following{
     opacity: 1;
@@ -400,6 +492,8 @@ filter: invert(1);
     right: 0;}
     .arrow_l{
         transform: scaleX(-1);
+    left: 0;
+
     }
 .close{
     position: absolute;
@@ -449,7 +543,7 @@ filter: invert(1);
 
     .ovalDiv {
         pointer-events: none;
-    mix-blend-mode: darken;
+    mix-blend-mode: exclusion;
       boz-shadow:0vh 0vh 7.5vh white;
         transition: 1s box-shadow;
         box-shadow: 0vh 0vh 15vh 15vh white, 0vh 0vh 0vh 100vw #3d3d3d00;
@@ -471,15 +565,18 @@ filter: invert(1);
     transition: 0s box-shadow;
     box-shadow: 0vh 0vh 15vh 15vh white, 0vh 0vh 0vh 100vw #3d3d3d;
     transition: opacity 1s;
+    filter: invert(1);
 }
 .turnOn .ovalDiv.shadow{
     opacity: 0;
 }
     .ovalDiv_sun_img{
-      background-image: url(sun.png);
+    z-index: 1000000000;
+      background-image: url(basic_img/sun.png);
     }
     .ovalDiv_moon_img{
-      background-image: url(moon.png);
+    z-index: 100000000000;
+      background-image: url(basic_img/moon.png);
     }
     .perspective_wrap{
     width: 100%;
@@ -495,11 +592,9 @@ filter: invert(1);
     transform: rotateX(-30deg) skewX(-24.5deg) scaleY(0.76);
 }
     .sidebottom.side_8 .perspective_wrap{
-    background: red;
     transform: rotateX(-36deg) skewX(-12deg) scaleY(0.92);
     }
     .sidebottom.side_7 .perspective_wrap{
-    background: rebeccapurple;
     transform: rotateX(-29deg) skewX(-5deg) scaleY(0.88);
 }
     .sidebottom.side_6 .perspective_wrap{
@@ -508,12 +603,10 @@ filter: invert(1);
     transform: rotateX(-20deg) scaleY(0.81);
 }
 .sidebottom.side_5 .perspective_wrap{
-    background: rebeccapurple;
     transform: rotateX(-29deg) skewX(5deg) scaleY(0.88);
     transform-origin: right top;
 }
     .sidebottom.side_4 .perspective_wrap{
-    background: red;
     transform: rotateX(-36deg) skewX(12deg) scaleY(0.92);
     transform-origin: right top;
     }
@@ -524,6 +617,7 @@ filter: invert(1);
     border: 1px solid white;
     z-index: 1;
     border-radius: 50% 50%;
+    pointer-events: none;
 }
 .bar_wrap{
     position: absolute;
@@ -536,8 +630,8 @@ filter: invert(1);
 <body>
 <div class="ovalDiv_moon_img ovalDiv_img">
   <div class="oval_following">
-    – Current Server: <span class="sp-name"></span><br>
-    – Site (City/Country): <span class="sp-loc"></span><br>
+    – Current Server Name: <span class="sp-name"></span><br>
+    – Location: <span class="sp-loc"></span><br>
     – Battery Level: <span class="sp-bat"></span><br>
     – Time There: <span class="sp-time"></span><br>
     </div>
@@ -556,36 +650,15 @@ filter: invert(1);
   <div id="ovalRoute"></div>
     <div class="title">Open Systems 3</div>
     <div class="info_bar">
-        About OS3<br>
-        About Museum<br>
-        supported by...<br>
+    This website is hosted across a network of solar powered servers and is sent to you from whichever server is in the most sunshine.
 </div>
-<div class="popup popup_2">
-    <img src="x.png" class="close">
-    <div class="popup_title"><br>Don’t Boil Your iPhone in Coca-Cola!</div> 
-    <div class="popup_artist">American Artist<br><br><br><br></div> 
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/272271002?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="American Artist, &quot;Don&#039;t Boil Your iPhone in Coca-Cola!&quot; (2018)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    <div class="popup_year">2018</div>
-    <div class="popup_format">Video</div>
-    <div class="popup_des"><br><br>This is a parody of a Youtube series where a man submits brand new smartphones into precarious circumstances, such as boiling a phone in coke, or placing it in liquid bromine. Rather than an homage to the "move fast and break things" ethos of Silicon Valley, this video, shot on a street in Bushwick with a camping stove, explores how one might use everyday materials to bring the dominant white interface of technology to another, Black, realm. </div>
-</div>
-<div class="popup popup_3">
-    <img src="x.png" class="close">
-    <div class="popup_title"><br>File</div>  
-    <div class="popup_artist">Ryan Kuo<br><br><br><br></div>
-    <div style="padding:56.25% 0 0 0;position:relative; background-image: url(work3.png);" class="popup_img"></div>
-    <a href="https://ryankuo.net/File" target="_blank" class="work_link">Explore Artwork</a>
-    <div class="popup_year">2016</div>
-    <div class="popup_format">Software</div>
-    <div class="popup_des"><br><br>"File is a process work inspired by agile methodologies.<br>
-<br>
 The File is a stack of technical documentation about itself. It begins as a discussion on the contingency of digital files and grows into a cipher for the artist-worker."</div>
 </div>
-<img class="arrow_r arrow" src="arrow.jpg">
-<img class="arrow_l arrow" src="arrow.jpg">
+<img class="arrow_r arrow" src="basic_img/arrow.jpg">
+<img class="arrow_l arrow" src="basic_img/arrow.jpg">
 
 <div class="wrap">
-    <img src="background.png">
+    <img src="basic_img/background.png">
     <div class="barhide side side_1"> <div class="bar_wrap"></div></div>
     <div class="barhide side side_3"> <div class="bar_wrap"></div></div>
     <div class="barhide side side_2"> <div class="bar_wrap"></div></div>
@@ -597,6 +670,9 @@ The File is a stack of technical documentation about itself. It begins as a disc
     <div class="barhide side side_9"> <div class="bar_wrap"></div></div>
     <div class="barhide side side_10"><div class="bar_wrap"></div></div>
     <div class="barhide side side_11"><div class="bar_wrap"></div></div>
+
+    <!-- <div class="sideextra sideextra_1"><div class="bar_wrap"></div></div> -->
+    <!-- <div class="sideextra sideextra_2"><div class="bar_wrap"></div></div> -->
 
     <div class="barhide sidebottom side_1" ><div class="perspective_wrap"></div></div>
     <div class="barhide sidebottom side_3" ><div class="perspective_wrap"></div></div>
@@ -615,7 +691,7 @@ The File is a stack of technical documentation about itself. It begins as a disc
     <div class="barhide sidetop side_3"></div>
     <div class="barhide sidetop side_4"></div>
     <div class="barhide sidetop side_5"></div>
-    <div class="barhide sidetop side_6"></div>
+    <div class="barhide sidetop side_6 sidetop_hovered"></div>
     <div class="barhide sidetop side_7"></div>
     <div class="barhide sidetop side_8"></div>
     <div class="barhide sidetop side_9"></div>
@@ -625,7 +701,7 @@ The File is a stack of technical documentation about itself. It begins as a disc
 <script>
     var tick_init = true
 function easeInOutSine(x){
-    return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
+return x === 0 ? 0 : Math.pow(2, 10 * x - 10);
 }
 
 (function () {
@@ -735,8 +811,28 @@ function easeInOutSine(x){
     const sun_img  = document.getElementsByClassName('ovalDiv_sun_img')[0];
     const moon_img = document.getElementsByClassName('ovalDiv_moon_img')[0];
 
+    // your gradient bar logic intact
+    if (secs > 21600 && secs < 64800) {
+      var sel = Math.round(map(angle, 0, 180, 20/2, (11-2)*20 - 20/2))+20;
+      if((sel>180 || sel<40)){
+        sel = sel +20
+      }else if((sel>140 || sel<80)){
+        sel = sel +8
+      }
+      for (var i = sel; i >= 1; i--) {
+        let sml =  ((easeInOutSine((sel - i) / sel)) / 2) * 100/8;
+        let big = (100 - ((easeInOutSine((sel - i) / sel)) / 2) * 100)/8;
+        $('.bar_' + (sel - i)).css({ 'background': `linear-gradient(0deg, transparent ${50 - sml - 5}%, black ${50 - sml}%, black ${50 + sml}%, transparent ${50 + sml + 5}%)` });
+      }
+      for (var j = 1; j >= 0; j--) {
+        let sml2 = ((easeInOutSine((j) / 20)) / 2) * 100/8/2;
+        let big2 =( 100 - ((easeInOutSine((j) / 20)) / 2) * 100)/8/2;
+        $('.bar_' + (sel + sel -  j)).css({ 'background': `linear-gradient(0deg, transparent ${50 - sml2 - 5}%, black ${50 - sml2}%, black ${50 + sml2}%, transparent ${50 + sml2 + 5}%)` });
+      }
+    }
     if (typeof tick_init !== 'undefined' && tick_init) {
-      if (angle < 180) $('.ovalDiv_sun').addClass('shadow'); else $('.ovalDiv_moon').addClass('shadow');
+      if ((angle+3600)%360 < 180) $('.ovalDiv_sun').addClass('shadow'); else $('.ovalDiv_moon').addClass('shadow');
+      console.log(angle)
       setTimeout(() => { $('body').addClass('turnOn'); }, 1000);
       tick_init = false;
     }
@@ -746,20 +842,6 @@ function easeInOutSine(x){
     if (sun_img)  animate(angle, sun_img);
     if (moon_img) animate(angle - 180, moon_img);
 
-    // your gradient bar logic intact
-    if (secs > 21600 && secs < 64800) {
-      var sel = Math.round(map(angle, 0, 180, 20/2, 11*20 - 20/2));
-      for (var i = sel - 1; i >= 0; i--) {
-        let sml =  ((easeInOutSine((sel - i) / sel)) / 2) * 100/4;
-        let big = (100 - ((easeInOutSine((sel - i) / sel)) / 2) * 100)/4;
-        $('.bar_' + i).css({ 'background': `linear-gradient(0deg, transparent ${sml + 50 - 5}%, black ${sml+50}%, black ${big+50}%, transparent ${big + 50 + 5}%)` });
-      }
-      // for (var j = 20; j >= 0; j--) {
-      //   let sml2 = ((easeInOutSine((j) / 20)) / 2) * 100/4;
-      //   let big2 =( 100 - ((easeInOutSine((j) / 20)) / 2) * 100)/4;
-      //   $('.bar_' + (sel + j)).css({ 'background': `linear-gradient(0deg, transparent ${sml2 + 50 - 5}%, black ${sml2+50}%, black ${big2+50}%, transparent ${big2 + 50 + 5}%)` });
-      // }
-    }
   }
 
   document.addEventListener('DOMContentLoaded', boot);
@@ -784,6 +866,26 @@ $('#ovalRoute').css({'top':centerY +'px'})
         elem.style.left = x + "px";
         elem.style.top = y + "px";
     }
+$(document).ready(function() {
+  let inactivityTimer;
+
+  function startInactivityTimer() {
+    inactivityTimer = setTimeout(function() {
+      $('body').removeClass('turnOn');
+    }, 6000); // 1 minute = 60000ms
+  }
+
+  function resetTimer() {
+    clearTimeout(inactivityTimer);
+    $('body').addClass('turnOn');
+    startInactivityTimer();
+  }
+
+  $(document).on('mousemove', resetTimer);
+
+  // Start the initial timer when page loads
+  startInactivityTimer();
+});
 
 
 
@@ -807,25 +909,28 @@ $('#ovalRoute').css({'top':centerY +'px'})
 
 
 
-for (var i = 5; i >= 1; i--) {
-    $('.side').append('<div class="background_image_wrap"><div class="background_image background_image_'+i+'"></div></div>')
+for (var i = 1; i <= 14; i++) {
+    $('.side').append('<div class="background_image_wrap background_image_wrap_'+i+'"><div class="background_image background_image_'+i+'"></div></div>')
 }
-for (var i = 5; i >= 1; i--) {
-    $('.sidebottom').find('.perspective_wrap').append('<div class="background_image_wrap"><div class="background_image background_image_'+i+'"></div></div>')
+for (var i = 1; i <= 14; i++) {
+    $('.sidebottom').find('.perspective_wrap').append('<div class="background_image_wrap background_image_wrap_'+i+'"><div class="background_image background_image_'+i+'"></div></div>')
 }
         
         var scroll_counter = 0
+        
+            scroll(scroll_counter)
+            scroll_img(scroll_counter)
 $('.sidetop').append('\
     <div class="artistname_wrap">\
-        <div class="artistname artistname_1">Rimbawan Gerilya</div>\
-        <div class="artistname artistname_2">American Artist</div>\
-        <div class="artistname artistname_3">Ryan Kuo</div>\
-        <div class="artistname artistname_4">Or Zubalsky</div>\
-        <div class="artistname artistname_5">Ryan Clarke</div>\
-        <div class="artistname artistname_6">Tiri Kananuruk and Sebastian Morales Prado</div>\
-        <div class="artistname artistname_7">Jen Liu</div>\
-        <div class="artistname artistname_8">Alice Yuan Zhang</div>\
-        <div class="artistname artistname_9">Herdimas Anggara</div>\
+        <div class="artistname artistname_1" >Rimbawan Gerilya</div>\
+        <div class="artistname artistname_2" >American Artist</div>\
+        <div class="artistname artistname_3" >Ryan Kuo</div>\
+        <div class="artistname artistname_4" >Or Zubalsky</div>\
+        <div class="artistname artistname_5" >Ryan Clarke</div>\
+        <div class="artistname artistname_6" >Tiri Kananuruk and Sebastian Morales Prado</div>\
+        <div class="artistname artistname_7" >Jen Liu</div>\
+        <div class="artistname artistname_8" >Alice Yuan Zhang</div>\
+        <div class="artistname artistname_9" >Herdimas Anggara</div>\
         <div class="artistname artistname_10">Chia Amisola</div>\
         <div class="artistname artistname_11">Ho Rui An</div>\
         <div class="artistname artistname_12">Bani Haykal</div>\
@@ -837,6 +942,17 @@ $('.barhide').hover(function(){
     $('.bar').css({'opacity':0})
 },function(){
     $('.bar').css({'opacity':1})
+})
+$('.sidetop').hover(function(){
+    $('.sidetop').removeClass('sidetop_hovered')
+    $(this).addClass('sidetop_hovered')
+    var selected = parseInt($(this).attr('class').split('side_')[1].split(' ')[0])
+    scroll_img(6-selected)
+    $(this)
+},function(){
+    $(this).removeClass('sidetop_hovered')
+    $('.sidetop.side_6').addClass('sidetop_hovered')
+    scroll_img(scroll_counter)
 })
 
 $('.side_1 .background_image_wrap').click(function() { window.location.href = 'detail.html'; });
@@ -879,7 +995,8 @@ $('.artistname_14').click(function() { window.location.href = 'detail.html'; });
             if(scroll_counter<-8){
                 scroll_counter = -8
             }
-            scroll()
+            scroll(scroll_counter)
+            scroll_img(scroll_counter)
             // scroll_sun()
         })
         $('.arrow_l').click(function(){
@@ -887,13 +1004,16 @@ $('.artistname_14').click(function() { window.location.href = 'detail.html'; });
             if(scroll_counter>5){
                 scroll_counter = 5
             }
-            scroll()
+            scroll(scroll_counter)
+            scroll_img(scroll_counter)
             // scroll_sun()
         })
-        function scroll(){
-            $('.artistname_wrap').css({'transform':'translateX('+(7.1428*scroll_counter)+'%)'})
-            $('.background_image_wrap').css({'transform':'translateX('+(7.1428*scroll_counter)+'%) translateY('+(100*scroll_counter)+'%)'})
+        function scroll(selected){
+            $('.artistname_wrap').css({'transform':'translateX('+(7.1428*selected)+'%)'})
             // $('.sidebottom .background_image_wrap').css({'transform':'translateX('+(7.1428*(scroll_counter-1))+'%) translateY('+(100*(scroll_counter+1))+'%)'})
+        }
+        function scroll_img(selected){
+            $('.background_image_wrap').css({'transform':'translateX('+(7.1428*(selected-5))+'%) translateY('+(100*(selected-5))+'%)'})
         }
     })
 
