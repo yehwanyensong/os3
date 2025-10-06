@@ -191,17 +191,17 @@ Dazzle Unicase Bold*/
     top: 26%;
     transform: scaleX(0.17) skewY(-35deg);
 }
-.turnOn .sidebottom.side_1{transform: scaleX(0.17) skewY(35deg) translateY(100%)}
-.turnOn .sidebottom.side_2{transform: scaleX(0.46) skewY(33deg) translateY(100%)}
-.turnOn .sidebottom.side_3{transform: scaleX(0.735) skewY(28.6deg) translateY(100%)}
-.turnOn .sidebottom.side_4{transform: scaleX(0.95) skewY(21.2deg) translateY(100%)}
-.turnOn .sidebottom.side_5{transform: scaleX(1.08) skewY(11.8deg) translateY(100%)}
-.turnOn .sidebottom.side_6{transform: scaleX(1.125) skewY(0deg) translateY(100%)}
-.turnOn .sidebottom.side_7{transform: scaleX(1.08) skewY(-11.8deg) translateY(100%)}
-.turnOn .sidebottom.side_8{transform: scaleX(0.95) skewY(-21.2deg) translateY(100%)}
-.turnOn .sidebottom.side_9{transform: scaleX(0.735) skewY(-28.6deg) translateY(100%)}
-.turnOn .sidebottom.side_10{transform: scaleX(0.46) skewY(-33deg) translateY(100%)}
-.turnOn .sidebottom.side_11{transform: scaleX(0.17) skewY(-35deg) translateY(100%)}
+.sidebottom.side_1{transform: scaleX(0.17) skewY(35deg) translateY(100%)}
+.sidebottom.side_2{transform: scaleX(0.46) skewY(33deg) translateY(100%)}
+.sidebottom.side_3{transform: scaleX(0.735) skewY(28.6deg) translateY(100%)}
+.sidebottom.side_4{transform: scaleX(0.95) skewY(21.2deg) translateY(100%)}
+.sidebottom.side_5{transform: scaleX(1.08) skewY(11.8deg) translateY(100%)}
+.sidebottom.side_6{transform: scaleX(1.125) skewY(0deg) translateY(100%)}
+.sidebottom.side_7{transform: scaleX(1.08) skewY(-11.8deg) translateY(100%)}
+.sidebottom.side_8{transform: scaleX(0.95) skewY(-21.2deg) translateY(100%)}
+.sidebottom.side_9{transform: scaleX(0.735) skewY(-28.6deg) translateY(100%)}
+.sidebottom.side_10{transform: scaleX(0.46) skewY(-33deg) translateY(100%)}
+.sidebottom.side_11{transform: scaleX(0.17) skewY(-35deg) translateY(100%)}
 .side_1 .artistname_wrap,
 .side_2 .artistname_wrap,
 .side_3 .artistname_wrap,
@@ -542,6 +542,7 @@ filter: invert(1);
     }
 
     .ovalDiv {
+        background-color: white;
         pointer-events: none;
     mix-blend-mode: exclusion;
       boz-shadow:0vh 0vh 7.5vh white;
@@ -599,7 +600,7 @@ filter: invert(1);
 }
     .sidebottom.side_6 .perspective_wrap{
     transform-origin: center top;
-    background: #339981;
+    /*background: #339981;*/
     transform: rotateX(-20deg) scaleY(0.81);
 }
 .sidebottom.side_5 .perspective_wrap{
@@ -947,8 +948,8 @@ $('.sidetop').hover(function(){
     $('.sidetop').removeClass('sidetop_hovered')
     $(this).addClass('sidetop_hovered')
     var selected = parseInt($(this).attr('class').split('side_')[1].split(' ')[0])
-    scroll_img(6-selected)
-    $(this)
+    scroll_img(6-selected+scroll_counter)
+    // $(this)
 },function(){
     $(this).removeClass('sidetop_hovered')
     $('.sidetop.side_6').addClass('sidetop_hovered')
