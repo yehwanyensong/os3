@@ -81,6 +81,13 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.col {
+  display: flex;
+  float: left;
+  gap: 50px; /* space between divs */
+}
+
+
 .col1 *{
 color: white;
 }
@@ -159,3 +166,13 @@ color: white;
 }
 a{text-decoration: none;
     cursor: pointer;}
+
+/* When the screen (or container) becomes too narrow */
+@media (max-width: 600px) {
+  .col {
+    display: block;
+  }
+  .sm_popup div{
+    float: none;
+  }
+}

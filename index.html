@@ -11,6 +11,7 @@
 <title></title>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <style>
+    body { touch-action: pan-y; }
 body,html{
     background-color: black;
     position: absolute;
@@ -626,6 +627,30 @@ filter: invert(1);
     top: 0;
     width: 100%;
     height: 100%;}
+.mobile #ovalRoute,
+.mobile .oval_following{
+    display: none;
+}
+.mobile.turnOn .side .background_image_wrap,
+.mobile.turnOn .sidebottom .background_image_wrap{
+    transition: opacity 0s transform 0s !important;
+    opacity: 1;
+}
+.mobile.turnOn .ovalDiv.shadow{
+    display: none;
+}
+
+.mobile .arrow {
+    height: 6vh;
+}
+@media (max-aspect-ratio: 1/1) {
+    .wrap,.wrap img {
+        width: 130%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    body { outline: 5px solid red; }
+}
 </style>
 </head>
 <body>
@@ -700,6 +725,23 @@ The File is a stack of technical documentation about itself. It begins as a disc
     <div class="barhide sidetop side_11"></div>
 <!-- </div> -->
 <script>
+    var isMobile = false
+function addMobileClass() {
+  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    document.body.classList.add('mobile');
+    $('body').addClass('turnOn');
+    isMobile = true
+  } else {
+    document.body.classList.remove('mobile');
+  }
+}
+
+// Run immediately
+addMobileClass();
+
+// Optional: run again if window is resized (for responsive desktops)
+window.addEventListener('resize', addMobileClass);
+
     var tick_init = true
 function easeInOutSine(x){
 return x === 0 ? 0 : Math.pow(2, 10 * x - 10);
@@ -872,7 +914,9 @@ $(document).ready(function() {
 
   function startInactivityTimer() {
     inactivityTimer = setTimeout(function() {
-      $('body').removeClass('turnOn');
+        if(!isMobile){
+              $('body').removeClass('turnOn');
+          }
     }, 30000); // 1 minute = 60000ms
   }
 
@@ -992,24 +1036,84 @@ $('.artistname_14').click(function() { window.location.href = 'detail/TegaBrain.
         $('.close').click(function(){
             $(this).parent().hide()
         })
-        $('.arrow_r').click(function(){
-            scroll_counter--
-            if(scroll_counter<-8){
-                scroll_counter = -8
-            }
-            scroll(scroll_counter)
-            scroll_img(scroll_counter)
-            // scroll_sun()
-        })
-        $('.arrow_l').click(function(){
-            scroll_counter++
-            if(scroll_counter>5){
-                scroll_counter = 5
-            }
-            scroll(scroll_counter)
-            scroll_img(scroll_counter)
-            // scroll_sun()
-        })
+
+
+
+
+// Reuse your bounds
+const MIN_COUNTER = -8;
+const MAX_COUNTER = 5;
+
+// Single source of truth
+function applyScroll(counter) {
+  // clamp
+  if (counter < MIN_COUNTER) counter = MIN_COUNTER;
+  if (counter > MAX_COUNTER) counter = MAX_COUNTER;
+
+  // call your existing functions
+  scroll(counter);
+  scroll_img(counter);
+  // scroll_sun();
+
+  return counter;
+}
+
+// Hook arrow clicks to shared logic
+$('.arrow_r').on('click', function(){
+  scroll_counter--;
+  scroll_counter = applyScroll(scroll_counter);
+});
+$('.arrow_l').on('click', function(){
+  scroll_counter++;
+  scroll_counter = applyScroll(scroll_counter);
+});
+
+// ---- Swipe support (mobile-friendly) ----
+(function attachSwipe(areaSelector){
+  const $area = $(areaSelector);               // change selector if you want a narrower zone
+  const SWIPE_PX = 40;                          // horizontal distance threshold
+  const SWIPE_MS = 600;                         // max duration to count as a swipe
+
+  let startX = 0, startY = 0, startT = 0, activeId = null;
+
+  // Use pointer events so it works on touch + pen + mouse
+  $area.on('pointerdown', function(e){
+    // Only react to primary touches
+    if (e.pointerType === 'mouse' && e.buttons !== 1) return;
+    activeId = e.pointerId;
+    startX = e.clientX;
+    startY = e.clientY;
+    startT = performance.now();
+  });
+
+  $area.on('pointerup pointercancel', function(e){
+    if (e.pointerId !== activeId) return;
+    activeId = null;
+
+    const dt = performance.now() - startT;
+    if (dt > SWIPE_MS) return;                 // too slow; ignore
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // Must be mostly horizontal and pass threshold
+    if (Math.abs(dx) < SWIPE_PX || Math.abs(dx) <= Math.abs(dy)) return;
+
+    if (dx < 0) {
+      // swipe LEFT -> same as right arrow click (move forward)
+      scroll_counter--;
+    } else {
+      // swipe RIGHT -> same as left arrow click (move backward)
+      scroll_counter++;
+    }
+    scroll_counter = applyScroll(scroll_counter);
+  });
+
+})('body'); 
+
+
+
+
         function scroll(selected){
             $('.artistname_wrap').css({'transform':'translateX('+(7.1428*selected)+'%)'})
             // $('.sidebottom .background_image_wrap').css({'transform':'translateX('+(7.1428*(scroll_counter-1))+'%) translateY('+(100*(scroll_counter+1))+'%)'})
