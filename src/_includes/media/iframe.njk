@@ -1,0 +1,10 @@
+<div class="media-container media-iframe">
+  <iframe
+    src="{{ mediaUrl }}"
+    {% if iframeWidth %}width="{{ iframeWidth }}"{% endif %}
+    {% if iframeHeight %}height="{{ iframeHeight }}"{% endif %}
+    frameborder="0"
+    allowfullscreen
+    {% if allowSandbox %}sandbox="{{ allowSandbox }}"{% endif %}>
+  </iframe>
+</div>
