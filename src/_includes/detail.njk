@@ -2,75 +2,13 @@
 
 {% block styles %}
 <link rel="stylesheet" href="/detail/style.css">
-<style>
-/* Media container styles */
-.media-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 2vh auto;
-}
-#artwork-container {
-    background: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#artwork-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.media-video video,
-.media-audio audio {
-    width: 100%;
-    max-width: 100%;
-}
-
-.media-iframe iframe {
-    width: 100%;
-    min-height: 60vh;
-}
-
-.media-image img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-</style>
 {% endblock %}
 
 {% block content %}
 {% include "header.njk" %}
 
-<div class="sm_popup">
-    <img src="/basic_img/x.png" class="close">
-    <div class="col1 col">
-        <div class="sm_popup_title">{{ title }}</div>
-        <div class="sm_popup_artist">{{ artist }}</div>
-        <div class="sm_popup_year">{{ year }}</div>
-        <div class="sm_popup_medium">{{ medium }}</div>
-        {% if duration %}<div class="sm_popup_duration">{{ duration }}</div>{% endif %}
-    </div>
-    <div class="col2 col">
-        <div class="sm_popup_button sm_popup_button_1">About</div>
-        {% if hasEssay %}
-        <a href="essay_{{ slug }}.html" class="sm_popup_button sm_popup_button_2">Essay</a>
-        {% endif %}
-        <a href="/index.html" class="sm_popup_button sm_popup_button_3">☼</a>
-        <div class="popup_detail"></div>
-    </div>
-</div>
-
 {# Render media based on presentation type #}
-{% if presentationType and mediaUrl %}
+{% if presentationType %}
   {% if presentationType === "video" %}
     {% include "media/video.njk" %}
   {% elif presentationType === "iframe" %}

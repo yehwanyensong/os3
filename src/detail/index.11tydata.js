@@ -2,7 +2,7 @@ export default {
   layout: "detail.njk",
   jquery: true,
   showHomeButton: true,
-  homeUrl: "/index.html",
+  homeUrl: "/",
   pagination: {
     data: "artworks",
     size: 1,

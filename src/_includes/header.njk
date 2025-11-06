@@ -1,3 +1,22 @@
 {% if showHomeButton %}
 <a href="{{ homeUrl | default('/index.html') }}" class="home_button">☼</a>
 {% endif %}
+
+<div class="sm_popup">
+    <img src="/basic_img/x.png" class="close">
+    <div class="col1 col">
+        <div class="sm_popup_title">{{ title }}</div>
+        <div class="sm_popup_artist">{{ artist }}</div>
+        <div class="sm_popup_year">{{ year }}</div>
+        <div class="sm_popup_medium">{{ medium }}</div>
+        {% if duration %}<div class="sm_popup_duration">{{ duration }}</div>{% endif %}
+    </div>
+    <div class="col2 col">
+        <div class="sm_popup_button sm_popup_button_1">About</div>
+        {% if hasEssay %}
+        <a href="essay_{{ slug }}.html" class="sm_popup_button sm_popup_button_2">Essay</a>
+        {% endif %}
+        <a href="/index.html" class="sm_popup_button sm_popup_button_3">☼</a>
+        <div class="popup_detail"></div>
+    </div>
+</div>

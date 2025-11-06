@@ -1,0 +1,43 @@
+---
+permalink: /js/two-channel.js
+---
+
+const artworkVideo = document.getElementById('artwork-video');
+const lectureVideo = document.getElementById('lecture-video');
+
+function syncPlayPause(source, target) {
+  source.addEventListener('play', () => {
+    if (target.paused) target.play();
+  });
+  source.addEventListener('pause', () => {
+    if (!target.paused) target.pause();
+  });
+}
+
+function syncTimeUpdate(source, target) {
+  let seeking = false;
+
+  source.addEventListener('seeking', () => {
+    seeking = true;
+    target.currentTime = source.currentTime;
+  });
+
+  source.addEventListener('seeked', () => {
+    seeking = false;
+  });
+
+  let lastSync = 0;
+  source.addEventListener('timeupdate', () => {
+    const now = Date.now();
+    // Throttle sync to once every 300ms
+    if (!seeking && Math.abs(target.currentTime - source.currentTime) > 0.3 && (now - lastSync > 300)) {
+      target.currentTime = source.currentTime;z
+      lastSync = now;
+    }
+  });
+}
+
+// Sync both ways
+syncPlayPause(artworkVideo, lectureVideo);
+syncTimeUpdate(artworkVideo, lectureVideo);
+//syncTimeUpdate(lectureVideo, artworkVideo);

@@ -132,15 +132,15 @@
   {
     "slug": "ho-rui-an",
     "artist": "Ho Rui An",
-    "title": "Artwork Title",
-    "year": "2024",
+    "title": "DASH",
+    "year": "2016–18",
     "medium": "Medium",
     "duration": "",
     "description": "Description goes here.",
     "hasEssay": false,
-    "presentationType": "default",
+    "presentationType": "custom",
     "mediaUrl": "",
-    "customTemplate": ""
+    "customTemplate": "custom/ho-rui-an.njk"
   },
   {
     "slug": "bani-haykal",
@@ -158,15 +158,15 @@
   {
     "slug": "samson-young",
     "artist": "Samson Young",
-    "title": "Artwork Title",
-    "year": "2024",
+    "title": "Liquid Borders",
+    "year": "2012-14",
     "medium": "Medium",
     "duration": "",
     "description": "Description goes here.",
     "hasEssay": false,
-    "presentationType": "default",
+    "presentationType": "custom",
     "mediaUrl": "",
-    "customTemplate": ""
+    "customTemplate": "custom/samson-young.njk"
   },
   {
     "slug": "tega-brain",
