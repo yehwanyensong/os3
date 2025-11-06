@@ -2,14 +2,14 @@
   {
     "slug": "rimbawan-gerilya",
     "artist": "Rimbawan Gerilya",
-    "title": "Artwork Title",
-    "year": "2024",
-    "medium": "Medium",
+    "title": "What Little Control",
+    "year": "2025",
+    "medium": "Video",
     "duration": "",
-    "description": "Description goes here.",
+    "description": "A newly commissioned short film about a figure in the DIY drone racing community in Jakarta.",
     "hasEssay": false,
-    "presentationType": "default",
-    "mediaUrl": "",
+    "presentationType": "video",
+    "mediaUrl": "https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/rimbawan-gerilya/low-res-preview-d01-full-duration.mp4",
     "customTemplate": ""
   },
   {
@@ -151,8 +151,8 @@
     "duration": "",
     "description": "Description goes here.",
     "hasEssay": false,
-    "presentationType": "default",
-    "mediaUrl": "",
+    "presentationType": "video",
+    "mediaUrl": "https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/bani-haykal/sifrmu-v24-documentation.mp4",
     "customTemplate": ""
   },
   {

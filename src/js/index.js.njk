@@ -1,7 +1,8 @@
 ---
 permalink: /js/index.js
 ---
-    var isMobile = false
+
+var isMobile = false
 function addMobileClass() {
   if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     document.body.classList.add('mobile');
@@ -219,7 +220,7 @@ $(document).ready(function() {
   var h = $(".side").outerHeight();
   // center horizontally, use half the height for vertical center
   $(".sidebottom .background_image").css("background-position", "center " + "calc(50% - " + (h) + "px)");
-  
+
   // optional: recalc on resize
   $(window).on("resize", function(){
     var h =  $(".side").outerHeight();
@@ -236,7 +237,7 @@ for (var i = 1; i <= 14; i++) {
 for (var i = 1; i <= 14; i++) {
     $('.sidebottom').find('.perspective_wrap').append('<div class="background_image_wrap background_image_wrap_'+i+'"><div class="background_image background_image_'+i+'"></div></div>')
 }
-        
+
         var scroll_counter = 0
 
             scroll(scroll_counter)
@@ -351,7 +352,7 @@ $('.arrow_l').on('click', function(){
     scroll_counter = applyScroll(scroll_counter);
   });
 
-})('body'); 
+})('body');
 
 
 
@@ -449,12 +450,12 @@ function addSunlightBar() {
             // var smlval = Math.min(parent_height-(value * scalefactor),value * scalefactor)
             // if(value>0){
             // bar.style.background = `
-            // linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px, 
+            // linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px,
             //                             transparent ${bigval}px, black ${bigval}px)`;
             //                         }else{
             // bar.style.background = `black`;
             //                         }
-            
+
             // bar.title = `${solarData[i].time} → ${value} W/m²`;
             $('.side_'+i+' .bar_wrap').append(bar)
         }
@@ -487,12 +488,12 @@ function addSunlightBar() {
 //             var smlval = Math.min(parent_height-(value * scalefactor),value * scalefactor)
 //             if(value>0){
 //             bar.style.background = `
-//             linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px, 
+//             linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px,
 //                                         transparent ${bigval}px, black ${bigval}px)`;
 //                                     }else{
 //             bar.style.background = `black`;
 //                                     }
-            
+
 //             bar.title = `${solarData[i].time} → ${value} W/m²`;
 //             $('.background_image_wrap').append(bar)
 //         }
