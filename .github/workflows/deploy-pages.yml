@@ -36,6 +36,8 @@ jobs:
 
       - name: Build 11ty site
         run: npm run build
+        env:
+          PATH_PREFIX: "/os3/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

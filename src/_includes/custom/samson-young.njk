@@ -1,5 +1,5 @@
 {% block extra_head %}
-<script src="/js/audio-controller.js" defer></script>
+<script src="{{ '/js/audio-controller.js' | url }}" defer></script>
 {% endblock %}
 {% block styles %}
   <style>
@@ -45,28 +45,28 @@
 <main id="artwork-container">
   <figure>
     <button type="button" class="media-toggle">
-      <img src="/basic_img/play.svg" alt="Play">
+      <img src="{{ '/basic_img/play.svg' | url }}" alt="Play">
     </button>
     <figcaption>Liquid Borders I (Tsim Bei Tsui & Sha Tau Kok)</figcaption>
     <audio src="https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/samson-young/liquid-borders-1.mp3"></audio>
   </figure>
   <figure>
     <button type="button" class="media-toggle">
-      <img src="/basic_img/play.svg" alt="Play">
+      <img src="{{ '/basic_img/play.svg' | url }}" alt="Play">
     </button>
     <figcaption>Liquid Borders II (Tak Yuet Lau & Lo Wo)</figcaption>
     <audio src="https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/samson-young/liquid-borders-2.mp3"></audio>
   </figure>
   <figure>
     <button type="button" class="media-toggle">
-      <img src="/basic_img/play.svg" alt="Play">
+      <img src="{{ '/basic_img/play.svg' | url }}" alt="Play">
     </button>
     <figcaption>Liquid Borders III (Yuen Long & Lok Ma Chau)</figcaption>
     <audio src="https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/samson-young/liquid-borders-3.mp3"></audio>
   </figure>
   <figure>
     <button type="button" class="media-toggle">
-      <img src="/basic_img/play.svg" alt="Play">
+      <img src="{{ '/basic_img/play.svg' | url }}" alt="Play">
     </button>
     <figcaption>Liquid Borders IV (Mai Po & Luk Keng)</figcaption>
     <audio src="https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/samson-young/liquid-borders-4.mp3"></audio>

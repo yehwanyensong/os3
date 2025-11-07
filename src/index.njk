@@ -6,7 +6,7 @@ permalink: /index.html
 {% extends "base.njk" %}
 
 {% block styles %}
-<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="{{ '/css/index.css' | url }}">
 {% endblock %}
 
 {% block content %}
@@ -33,11 +33,11 @@ permalink: /index.html
 <div class="info_bar">
   This website is hosted across a network of solar powered servers and is sent to you from whichever server is in the most sunshine.
 </div>
-<img class="arrow_r arrow" src="/basic_img/arrow.jpg">
-<img class="arrow_l arrow" src="/basic_img/arrow.jpg">
+<img class="arrow_r arrow" src="{{ '/basic_img/arrow.jpg' | url }}">
+<img class="arrow_l arrow" src="{{ '/basic_img/arrow.jpg' | url }}">
 
 <div class="wrap">
-  <img src="/basic_img/background.png">
+  <img src="{{ '/basic_img/background.png' | url }}">
   <div class="barhide side side_1"> <div class="bar_wrap"></div></div>
   <div class="barhide side side_3"> <div class="bar_wrap"></div></div>
   <div class="barhide side side_2"> <div class="bar_wrap"></div></div>
@@ -77,5 +77,5 @@ permalink: /index.html
 {% endblock %}
 
 {% block scripts %}
-<script src="/js/index.js"></script>
+<script src="{{ '/js/index.js' | url }}"></script>
 {% endblock %}

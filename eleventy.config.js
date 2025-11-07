@@ -2,7 +2,7 @@ export default function(eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/artwork_img");
   eleventyConfig.addPassthroughCopy("src/basic_img");
-  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  // CSS is now a template (index.css.njk), not passthrough
   // JS files are now templates, not passthrough
   eleventyConfig.addPassthroughCopy({ "src/detail/style.css": "detail/style.css" });
 
@@ -21,6 +21,9 @@ export default function(eleventyConfig) {
     templateFormats: ["njk", "html", "md", "11tydata.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    dataTemplateEngine: "njk",
+    // Path prefix for GitHub Pages deployment
+    // Use /os3/ for production, / for local dev
+    pathPrefix: process.env.PATH_PREFIX || "/"
   };
 }

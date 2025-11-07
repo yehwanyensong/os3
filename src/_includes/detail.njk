@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {% block styles %}
-<link rel="stylesheet" href="/detail/style.css">
+<link rel="stylesheet" href="{{ '/detail/style.css' | url }}">
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@
 {% endif %}
 
 <div class="popup popup_about">
-    <img src="/basic_img/x.png" class="close">
+    <img src="{{ '/basic_img/x.png' | url }}" class="close">
     <div class="popup_artist">{{ artist }}</div>
     <div class="popup_title">{{ title }}</div>
     <div class="popup_year">{{ year }}</div>

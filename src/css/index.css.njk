@@ -1,3 +1,6 @@
+---
+permalink: /css/index.css
+---
 body { touch-action: pan-y; }
 body,html{
 background-color: black;
@@ -57,7 +60,7 @@ height: 21.6%;
 width: 12.5%;
 transform-origin: left top;
 overflow: hidden;
-background-image: url(/basic_img/plus.png);
+background-image: url({{ '/basic_img/plus.png' | url }});
 background-size: 10%;
 background-position: 50% 50%;
 background-repeat: no-repeat;
@@ -82,7 +85,7 @@ transform-origin: left;}
 perspective: 100vh;
 left: 50%;
 top: 0;
-background-image: url(/basic_img/plus.png);
+background-image: url({{ '/basic_img/plus.png' | url }});
 background-size: 10%;
 background-position: 50% 35%;
 background-repeat: no-repeat;
@@ -312,20 +315,20 @@ background-position: center;
 
 
 
-.background_image_1{ background-image: url(/artwork_img/Rimbawan.png);}
-.background_image_2{ background-image: url(/artwork_img/American.png);}
-.background_image_3{ background-image: url(/artwork_img/Ryank.png);}
-.background_image_4{ background-image: url(/artwork_img/Or.png);}
-.background_image_5{ background-image: url(/artwork_img/Ryanc.png);}
-.background_image_6{ background-image: url(/artwork_img/Tiri.png);}
-.background_image_7{ background-image: url(/artwork_img/Jen.png);}
-.background_image_8{ background-image: url(/artwork_img/Alice.png);}
-.background_image_9{ background-image: url(/artwork_img/Herdimas.png);}
-.background_image_10{background-image: url(/artwork_img/Chia.png);}
-.background_image_11{background-image: url(/artwork_img/Ho.png);}
-.background_image_12{ background-image:url(/artwork_img/Bani.png);}
-.background_image_13{background-image: url(/artwork_img/Samson.png);}
-.background_image_14{background-image: url(/artwork_img/Tega.png);}
+.background_image_1{ background-image: url({{ '/artwork_img/Rimbawan.png' | url }});}
+.background_image_2{ background-image: url({{ '/artwork_img/American.png' | url }});}
+.background_image_3{ background-image: url({{ '/artwork_img/Ryank.png' | url }});}
+.background_image_4{ background-image: url({{ '/artwork_img/Or.png' | url }});}
+.background_image_5{ background-image: url({{ '/artwork_img/Ryanc.png' | url }});}
+.background_image_6{ background-image: url({{ '/artwork_img/Tiri.png' | url }});}
+.background_image_7{ background-image: url({{ '/artwork_img/Jen.png' | url }});}
+.background_image_8{ background-image: url({{ '/artwork_img/Alice.png' | url }});}
+.background_image_9{ background-image: url({{ '/artwork_img/Herdimas.png' | url }});}
+.background_image_10{background-image: url({{ '/artwork_img/Chia.png' | url }});}
+.background_image_11{background-image: url({{ '/artwork_img/Ho.png' | url }});}
+.background_image_12{ background-image:url({{ '/artwork_img/Bani.png' | url }});}
+.background_image_13{background-image: url({{ '/artwork_img/Samson.png' | url }});}
+.background_image_14{background-image: url({{ '/artwork_img/Tega.png' | url }});}
 
 .bar{
 background: transparent;
@@ -561,11 +564,11 @@ opacity: 0;
 }
 .ovalDiv_sun_img{
 z-index: 1000000000;
-  background-image: url(/basic_img/sun.png);
+  background-image: url({{ '/basic_img/sun.png' | url }});
 }
 .ovalDiv_moon_img{
 z-index: 100000000000;
-  background-image: url(/basic_img/moon.png);
+  background-image: url({{ '/basic_img/moon.png' | url }});
 }
 .perspective_wrap{
 width: 100%;
