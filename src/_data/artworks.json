@@ -80,14 +80,14 @@
   {
     "slug": "jen-liu",
     "artist": "Jen Liu",
-    "title": "Artwork Title",
-    "year": "2024",
-    "medium": "Medium",
-    "duration": "",
-    "description": "Description goes here.",
+    "title": "Pink Slime Caesar Shift: Gold Loop Chapter 2",
+    "year": "2020–21",
+    "medium": "4K video, 4-channel sound",
+    "duration": "28 min",
+    "description": "Pink Slime Caesar Shift: Gold Loop reflects on e-waste, political resistance, and the disappearance of labor activists. Gathering firsthand accounts of female electronics workers in South China, I investigate the physical, legal, and biochemical realities of gold extraction from e-waste (old computers, cell phones, and other domestic electronics). This gold is leached out by using strong acids to dissolve plastic and base metals. These chemicals seep into the environment and accumulate in the bodies of workers, causing long-term environmental poisoning — a mirror image of the industrial poisoning incurred by the production of electronics in the first place, “a gold loop.”",
     "hasEssay": false,
-    "presentationType": "default",
-    "mediaUrl": "",
+    "presentationType": "video",
+    "mediaUrl": "https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/jen-liu/gold-loop-2025-redux-subs-all-hd.mp4",
     "customTemplate": ""
   },
   {
