@@ -1,0 +1,8 @@
+name = "yehwan-os3"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Assets configuration - serve built 11ty site
+[site]
+bucket = "./_site"
+

@@ -1,0 +1,55 @@
+{% block extra_head %}
+<script src="/js/two-channel.js" defer></script>
+{% endblock%}
+
+{% block styles %}
+<style>
+  #artwork-container {
+        background: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        #lecture {
+            position: fixed;
+            z-index: 10;
+            width: 400px;
+            padding: 15px;
+            background: grey;
+            transform: rotateX(332deg) rotateY(19deg) rotateZ(11deg);
+            line-height: 1;
+            border-radius: 25px;
+            right: 15px;
+            bottom: 25px;
+            border: double 4px white;
+
+            video {
+                aspect-ratio: 16/9;
+            }
+        }
+    }
+</style>
+{% endblock %}
+
+<main id="artwork-container">
+    <video id="artwork-video" autoplay loop playsinline controls>
+      <source src="https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/ho-rui-an/dash-projection-exhibition-002.mp4" type="video/mp4">
+    </video>
+    <aside id="lecture">
+      <video id="lecture-video" autoplay loop playsinline>
+        <source src="https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/ho-rui-an/dash-performance-exhibition-001.mp4" type="video/mp4">
+      </video>
+    </aside>
+</main>

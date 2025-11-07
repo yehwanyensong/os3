@@ -1,0 +1,41 @@
+---
+permalink: /js/controls.js
+---
+const controls = document.querySelector('#controls')
+const playback = controls.querySelector('button')
+const video = document.querySelector('#artwork-video')
+const progress = controls.querySelector('#progress')
+
+playback.addEventListener('click', () => {
+  if (video.paused) {
+    video.play()
+    playback.textContent = 'pause'
+  } else {
+    video.pause()
+    playback.textContent = 'play'
+  }
+})
+
+progress.addEventListener('click', (e) => {
+  // get cursor position relative to the progress bar
+  const rect = progress.getBoundingClientRect()
+  const offsetX = e.clientX - rect.left
+  // calculate the percentage of the progress bar clicked
+  const value = (offsetX / rect.width)
+  // seek video to that percentage
+  video.currentTime = Math.round(value * video.duration)
+})
+
+video.addEventListener('timeupdate', () => {
+    const value = (video.currentTime / video.duration) * 100
+    progress.value = value
+
+    if (!video.paused && playback.textContent !== 'pause') {
+        playback.textContent = 'pause'
+    }
+})
+
+// check if the video is paused on load
+if (video.paused) {
+  playback.textContent = 'play'
+}
