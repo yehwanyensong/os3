@@ -97,8 +97,6 @@ This creates:
   - `basic_img/` - UI assets
   - `index.njk` - Homepage template
 
-```
-
 ## Project Structure
 
 ```
