@@ -1,6 +1,6 @@
 # Open Systems 3 Exhibition
 
-This is an 11ty-powered online exhibition hosted on Cloudflare Workers.
+11ty-powered site for os3.
 
 ## Development
 
@@ -97,52 +97,7 @@ This creates:
   - `basic_img/` - UI assets
   - `index.njk` - Homepage template
 
-## Deployment to Cloudflare Workers
-
-### First-Time Setup
-
-1. Install Wrangler CLI globally:
-```bash
-npm install -g wrangler
 ```
-
-2. Login to Cloudflare:
-```bash
-wrangler login
-```
-
-3. Get your Cloudflare Account ID:
-   - Go to https://dash.cloudflare.com
-   - Select your account
-   - Copy the Account ID from the right sidebar
-
-4. Create API Token:
-   - Go to https://dash.cloudflare.com/profile/api-tokens
-   - Click "Create Token"
-   - Use "Edit Cloudflare Workers" template
-   - Create token and copy it
-
-5. Add secrets to GitHub repository:
-   - Go to your repository Settings > Secrets and variables > Actions
-   - Add two secrets:
-     - `CLOUDFLARE_API_TOKEN`: Your API token
-     - `CLOUDFLARE_ACCOUNT_ID`: Your account ID
-
-### Manual Deployment
-
-You can also deploy manually:
-
-```bash
-# Build the site first
-npm run build
-
-# Deploy to Cloudflare
-npx wrangler deploy
-```
-
-### Automatic Deployment
-
-The site automatically deploys when you push to the `master` or `main` branch via GitHub Actions.
 
 ## Project Structure
 
