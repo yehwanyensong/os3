@@ -46,7 +46,7 @@
     "medium": "Medium",
     "duration": "",
     "description": "Description goes here.",
-    "hasEssay": false,
+    "hasEssay": true,
     "presentationType": "default",
     "mediaUrl": "",
     "customTemplate": ""
