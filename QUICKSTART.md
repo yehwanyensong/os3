@@ -108,7 +108,7 @@ Edit `src/index.njk`:
 ### Update Styles
 
 - Homepage: Edit `src/css/index.css`
-- Detail pages: Edit `src/detail/style.css`
+- Detail pages: Edit `src/css/artwork-detail.css`
 
 ### Add a Custom Artwork Template
 

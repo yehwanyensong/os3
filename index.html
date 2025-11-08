@@ -35,7 +35,6 @@ Dazzle Unicase Bold*/
 *{
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
@@ -147,47 +146,47 @@ Dazzle Unicase Bold*/
     top: 26.1%;
     transform: scaleX(0.46) skewY(33deg)
 }
-.side_3{    
+.side_3{
     left: 8.05%;
     top: 39.3%;
     transform: scaleX(0.735) skewY(28.6deg)
 }
-.side_4{    
+.side_4{
     left: 17.2%;
     top: 50.3%;
     transform: scaleX(0.95) skewY(21.2deg);
 }
-.side_5{    
+.side_5{
     left: 29.1%;
     top: 58.2%;
     transform: scaleX(1.08) skewY(11.8deg);
 }
-.side_6{    
+.side_6{
     left: 42.6%;
     top: 62.4%;
     transform: scaleX(1.125) skewY(0deg);
 }
-.side_7{    
+.side_7{
     left: 56.66%;
     top: 62.4%;
     transform: scaleX(1.08) skewY(-11.8deg)
 }
-.side_8{      
+.side_8{
     left: 70.18%;
     top: 58.2%;
     transform: scaleX(0.95) skewY(-21.2deg)
 }
-.side_9{ 
+.side_9{
     left: 82.05%;
     top: 50.3%;
     transform: scaleX(0.735) skewY(-28.6deg)
 }
-.side_10{ 
+.side_10{
     left: 91.25%;
     top: 39.2%;
     transform: scaleX(0.46) skewY(-33deg);
 }
-.side_11{ 
+.side_11{
     left: 97%;
     top: 26%;
     transform: scaleX(0.17) skewY(-35deg);
@@ -422,7 +421,7 @@ Dazzle Unicase Bold*/
     font-weight: 700;
     font-style: normal;
 }
-.info_bar{ 
+.info_bar{
     position: absolute;
     z-index: 1000000000000000;
     left: 49.5%;
@@ -943,7 +942,7 @@ $(document).ready(function() {
   var h = $(".side").outerHeight();
   // center horizontally, use half the height for vertical center
   $(".sidebottom .background_image").css("background-position", "center " + "calc(50% - " + (h) + "px)");
-  
+
   // optional: recalc on resize
   $(window).on("resize", function(){
     var h =  $(".side").outerHeight();
@@ -960,7 +959,7 @@ for (var i = 1; i <= 14; i++) {
 for (var i = 1; i <= 14; i++) {
     $('.sidebottom').find('.perspective_wrap').append('<div class="background_image_wrap background_image_wrap_'+i+'"><div class="background_image background_image_'+i+'"></div></div>')
 }
-        
+
         var scroll_counter = 0
 
             scroll(scroll_counter)
@@ -1109,7 +1108,7 @@ $('.arrow_l').on('click', function(){
     scroll_counter = applyScroll(scroll_counter);
   });
 
-})('body'); 
+})('body');
 
 
 
@@ -1207,12 +1206,12 @@ function addSunlightBar() {
             // var smlval = Math.min(parent_height-(value * scalefactor),value * scalefactor)
             // if(value>0){
             // bar.style.background = `
-            // linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px, 
+            // linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px,
             //                             transparent ${bigval}px, black ${bigval}px)`;
             //                         }else{
             // bar.style.background = `black`;
             //                         }
-            
+
             // bar.title = `${solarData[i].time} → ${value} W/m²`;
             $('.side_'+i+' .bar_wrap').append(bar)
         }
@@ -1245,12 +1244,12 @@ function addSunlightBar() {
 //             var smlval = Math.min(parent_height-(value * scalefactor),value * scalefactor)
 //             if(value>0){
 //             bar.style.background = `
-//             linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px, 
+//             linear-gradient(0deg, black ${smlval}px, transparent ${smlval}px,
 //                                         transparent ${bigval}px, black ${bigval}px)`;
 //                                     }else{
 //             bar.style.background = `black`;
 //                                     }
-            
+
 //             bar.title = `${solarData[i].time} → ${value} W/m²`;
 //             $('.background_image_wrap').append(bar)
 //         }

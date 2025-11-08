@@ -4,7 +4,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/basic_img");
   // CSS is now a template (index.css.njk), not passthrough
   // JS files are now templates, not passthrough
-  eleventyConfig.addPassthroughCopy({ "src/detail/style.css": "detail/style.css" });
+  eleventyConfig.addPassthroughCopy({ "src/css/artwork-detail.css": "css/artwork-detail.css" });
 
   // Copy media directories (add these as needed)
   eleventyConfig.addPassthroughCopy("src/videos");

@@ -197,7 +197,7 @@ For questions or issues:
 ### Changing Site Styles
 
 - Edit `src/css/index.css` for homepage
-- Edit `src/detail/style.css` for detail pages
+- Edit `src/css/artwork-detail.css` for detail pages
 - Add custom CSS blocks in templates as needed
 
 ### Adding New Page Types
