@@ -34,8 +34,8 @@
     "duration": "",
     "description": "File is an ongoing process work inspired by agile methodologies. File consists of a hypertext essay that provides technical documentation of Kuo's artistic process, along with a collaborative wiki for problem resolution. The user maneuvers through the wiki by performing actions on File, navigating its structure, and completing tasks. Each encounter may produce a unique set of user interactions, a singular performance over time.",
     "hasEssay": false,
-    "presentationType": "default",
-    "mediaUrl": "",
+    "presentationType": "iframe",
+    "mediaUrl": "https://taroface.github.io/file/",
     "customTemplate": ""
   },
   {
