@@ -15,14 +15,14 @@
   {
     "slug": "american-artist",
     "artist": "American Artist",
-    "title": "Artwork Title",
-    "year": "2024",
+    "title": "Don’t Boil Your iPhone in Coca-Cola!",
+    "year": "2018",
     "medium": "Medium",
-    "duration": "",
+    "duration": "5 min, 27 sec",
     "description": "Description goes here.",
     "hasEssay": true,
-    "presentationType": "default",
-    "mediaUrl": "",
+    "presentationType": "video",
+    "mediaUrl": "https://pub-d42aa07d10564317a76f88307d945e1a.r2.dev/american-artist/dont-boil-your-iphone-in-coca-cola-1080.mp4",
     "customTemplate": ""
   },
   {
