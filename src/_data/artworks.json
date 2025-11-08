@@ -125,8 +125,8 @@
     "duration": "",
     "description": "Description goes here.",
     "hasEssay": true,
-    "presentationType": "default",
-    "mediaUrl": "",
+    "presentationType": "iframe",
+    "mediaUrl": "https://las-pinas.com/street.html",
     "customTemplate": ""
   },
   {
